@@ -18,3 +18,8 @@ jar {
 		attributes "Implementation-Title" : "Gradle Quickstatrt", "Implementation-Version" : version
 	}
 }
+
+task show << {
+	println relativePath(compileJava.destinationDir)
+	println relativePath(processResources.destinationDir)
+}
