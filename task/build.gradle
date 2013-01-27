@@ -82,3 +82,7 @@ task intro(dependsOn : hello1) << {
 hello1 << {
 	println "hello, Gradle adding behaviour"
 }
+
+task intro2 << {
+	println "hello, gradle"
+}
