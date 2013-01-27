@@ -16,3 +16,15 @@ task dist(dependsOn : [compile, test]) << {
 
 println name
 println project.name
+
+classDir = new File("build/classes")
+
+task resources << {
+	classDir.mkdirs()
+}
+
+task compile1(dependsOn : "resources") << {
+	if(classDir.isDirectory()) {
+		println "The class directory exist. I can operate"
+	}
+}
