@@ -78,3 +78,7 @@ ant.importBuild 'build.xml'
 task intro(dependsOn : hello1) << {
 	println "hello, gradle"
 }
+
+hello1 << {
+	println "hello, Gradle adding behaviour"
+}
