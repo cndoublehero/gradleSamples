@@ -13,3 +13,6 @@ task test(dependsOn : [compile, compileTest]) << {
 task dist(dependsOn : [compile, test]) << {
 	println "building the distribution"
 }
+
+println name
+println project.name
