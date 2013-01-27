@@ -28,3 +28,11 @@ task compile1(dependsOn : "resources") << {
 		println "The class directory exist. I can operate"
 	}
 }
+
+task printProps << {
+    println commandLineProjectProp
+    println gradlePropertiesProp
+    println systemProjectProp
+    println envProjectProp
+    println System.properties['system']
+}
