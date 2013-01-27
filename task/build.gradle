@@ -36,3 +36,23 @@ task printProps << {
     println envProjectProp
     println System.properties['system']
 }
+
+task taskX << {
+	println "taskX"
+}
+
+taskX.dependsOn {
+	tasks.findAll { task -> task.name.startsWith("lib")}
+}
+
+task lib1 << {
+	println "lib1"
+}
+
+task lib2 << {
+	println "lib2"
+}
+
+task nlib1 << {
+	println "2lib2"
+}
