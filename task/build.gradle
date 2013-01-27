@@ -56,3 +56,11 @@ task lib2 << {
 task nlib1 << {
 	println "2lib2"
 }
+
+compile.doFirst {
+	if(true) { throw new StopExecutionException()}
+}
+
+task myTask(dependsOn : "compile") << {
+	println "I'm not affected"
+}
