@@ -72,3 +72,5 @@ task hello << {
 	ant.echo(message : greeting)
 	ant.echo("hello from Ant")
 }
+
+ant.importBuild 'build.xml'
