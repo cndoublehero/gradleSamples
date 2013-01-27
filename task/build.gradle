@@ -64,3 +64,5 @@ compile.doFirst {
 task myTask(dependsOn : "compile") << {
 	println "I'm not affected"
 }
+
+myTask.enabled = false
