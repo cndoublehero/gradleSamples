@@ -66,3 +66,9 @@ task myTask(dependsOn : "compile") << {
 }
 
 myTask.enabled = false
+
+task hello << {
+	String greeting = "hello from Ant"
+	ant.echo(message : greeting)
+	ant.echo("hello from Ant")
+}
